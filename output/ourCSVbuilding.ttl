@@ -1,0 +1,57 @@
+@prefix inst: <https://example.org/myFirstInstanceGraph/> .
+@prefix mfi: <https://example.org/myFirstOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://example.org/myFirstInstanceGraph> a owl:Ontology .
+
+inst:AHU_1 a mfi:AirHandlingUnit ;
+    mfi:hasLocation inst:space_3 ;
+    mfi:name "AHU 1" .
+
+inst:Sensor_1 a mfi:Sensor ;
+    mfi:hasLocation inst:space_1 ;
+    mfi:name "Sensor 1" .
+
+inst:Wall_1 a mfi:Wall ;
+    mfi:hasLocation inst:space_1,
+        inst:space_2 ;
+    mfi:name "Wall 1" .
+
+inst:Wall_2 a mfi:Wall ;
+    mfi:hasLocation inst:space_1,
+        inst:space_2 ;
+    mfi:name "Wall 2" .
+
+inst:Wall_3 a mfi:Wall ;
+    mfi:hasLocation inst:space_2,
+        inst:space_3 ;
+    mfi:name "Wall 3" .
+
+inst:Wall_4 a mfi:Wall ;
+    mfi:hasLocation inst:space_3 ;
+    mfi:name "Wall 4" .
+
+inst:Wall_5 a mfi:Wall ;
+    mfi:hasLocation inst:space_1,
+        inst:space_3 ;
+    mfi:name "Wall 5" .
+
+inst:Wall_6 a mfi:Wall ;
+    mfi:hasLocation inst:space_1,
+        inst:space_3 ;
+    mfi:name "Wall 6" .
+
+inst:Wall_7 a mfi:Wall ;
+    mfi:hasLocation inst:space_2,
+        inst:space_3 ;
+    mfi:name "Wall 7" .
+
+inst:space_2 a mfi:Space ;
+    mfi:name "Bedroom" .
+
+inst:space_1 a mfi:Space ;
+    mfi:name "Kitchen" .
+
+inst:space_3 a mfi:Space ;
+    mfi:name "Living Space" .
+

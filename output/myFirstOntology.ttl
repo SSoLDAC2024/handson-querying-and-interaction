@@ -1,0 +1,46 @@
+@prefix mfi: <https://example.org/myFirstOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://example.org/myFirstOntology> a owl:Ontology .
+
+mfi:AirHandlingUnit a owl:Class ;
+    rdfs:subClassOf mfi:BuildingEquipment .
+
+mfi:Sensor a owl:Class ;
+    rdfs:subClassOf mfi:BuildingEquipment .
+
+mfi:Space a owl:Class ;
+    rdfs:subClassOf mfi:Zone .
+
+mfi:Wall a owl:Class ;
+    rdfs:subClassOf mfi:BuildingElement .
+
+mfi:hasElement a owl:ObjectProperty ;
+    rdfs:domain mfi:Zone ;
+    rdfs:range mfi:Element ;
+    owl:inverseOf mfi:hasLocation .
+
+mfi:hasPart a owl:ObjectProperty ;
+    rdfs:domain mfi:Aggregate ;
+    rdfs:range mfi:Part .
+
+mfi:Aggregate a owl:Class ;
+    rdfs:subClassOf mfi:Element .
+
+mfi:BuildingElement a owl:Class ;
+    rdfs:subClassOf mfi:Element .
+
+mfi:Part a owl:Class .
+
+mfi:hasLocation a owl:ObjectProperty ;
+    rdfs:domain mfi:Element ;
+    rdfs:range mfi:Zone .
+
+mfi:BuildingEquipment a owl:Class ;
+    rdfs:subClassOf mfi:Element .
+
+mfi:Zone a owl:Class .
+
+mfi:Element a owl:Class .
+

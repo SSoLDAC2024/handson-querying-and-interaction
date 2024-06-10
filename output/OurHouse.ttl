@@ -1,0 +1,48 @@
+@prefix inst: <https://example.org/myFirstInstanceGraph#> .
+@prefix mfi: <https://example.org/myFirstOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://example.org/myFirstInstanceGraph> a owl:Ontology .
+
+inst:AHU_45 a mfi:AirHandlingUnit ;
+    mfi:name "The AirHandlingUnit." .
+
+inst:Aggregation_1 a mfi:Aggregate ;
+    mfi:name "Note that aggregations should be modelled differently." .
+
+inst:HumiditySensor_1 a mfi:Sensor ;
+    mfi:name "The sensor that measures air humidity values." .
+
+inst:Part_1 a mfi:Part ;
+    mfi:name "Part 1 of the aggregation." .
+
+inst:Part_2 a mfi:Part ;
+    mfi:name "Part 2 of the aggregation." .
+
+inst:Part_3 a mfi:Part ;
+    mfi:name "Part 3 of the aggregation." .
+
+inst:TemperatureSensor_1 a mfi:Sensor ;
+    mfi:name "The sensor that measures temperature values." .
+
+inst:Wall_1 a mfi:Wall ;
+    mfi:name "Wall number 1." .
+
+inst:Wall_2 a mfi:Wall ;
+    mfi:name "Wall number 2." .
+
+inst:Wall_3 a mfi:Wall ;
+    mfi:name "Wall number 3." .
+
+inst:Wall_4 a mfi:Wall ;
+    mfi:name "Wall number 4." .
+
+inst:space_1 a mfi:Space ;
+    mfi:name "This is our first space." .
+
+inst:space_2 a mfi:Space ;
+    mfi:name "This is our second space." .
+
+inst:space_3 a mfi:Space ;
+    mfi:name "This is our third space." .
+

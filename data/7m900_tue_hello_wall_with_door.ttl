@@ -1,0 +1,61 @@
+# baseURI: http://linkedbuildingdata.net/ifc/resources20200408_172328/
+
+@prefix inst: <http://linkedbuildingdata.net/ifc/resources20200408_172328/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix bot:  <https://w3id.org/bot#> .
+@prefix beo:  <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix mep:  <https://pi.pauwel.be/voc/distributionelement#> .
+@prefix props:  <https://w3id.org/props#> .
+
+inst: rdf:type <http://www.w3.org/2002/07/owl#Ontology> .
+
+inst:site_23
+	rdf:type bot:Site ;
+	rdfs:label "TU/e campus"^^xsd:string ;
+	rdfs:comment "The High Tech campus of the Eindhoven University of Technology"^^xsd:string ;
+	bot:hasGuid "f55eaf97-145e-4431-b2f3-69f9634f244b"^^xsd:string ;
+	bot:hasBuilding inst:building_29 . 
+
+inst:building_29
+	a bot:Building ;
+	rdfs:label "Vertigo Building"^^xsd:string ;
+	rdfs:comment "TU/e Department of the Built Environment"^^xsd:string ;
+	bot:hasGuid "3ca7e585-4e3e-4969-a86f-f049f4fbde52"^^xsd:string ;
+	bot:hasStorey inst:storey_35 . 
+
+inst:storey_35
+	a bot:Storey ;
+	bot:hasGuid "0c207ba4-d0b8-4fff-bcd0-c1d8c7f7b5ff"^^xsd:string ;
+	rdfs:label "Default Building Storey"^^xsd:string ;
+	rdfs:comment "Description of Default Building Storey"^^xsd:string ;
+	bot:containsElement inst:wall_45 , inst:door_124 . 
+
+inst:wall_45
+	a bot:Element ;
+	a beo:Wall ;
+	rdfs:label "Wall xyz"^^xsd:string ;
+	rdfs:comment "Description of Wall"^^xsd:string ;
+	bot:hasGuid "f92c2898-fd68-44ef-9178-3348e340017b"^^xsd:string ;
+	bot:hostsElement inst:door_124 ;
+	props:tag ""^^xsd:string ;
+	props:Reference ""^^xsd:string ;
+	props:AcousticRating ""^^xsd:string ;
+	props:FireRating ""^^xsd:string ;
+	props:Combustible false ;
+	props:SurfaceSpreadOfFlame ""^^xsd:string ;
+	props:ThermalTransmittance "2.400E-1"^^xsd:double ;
+	props:IsExternal true ;
+	props:ExtendToStructure false ;
+	props:LoadBearing false ;
+	props:Compartmentation false . 
+
+inst:door_124
+	a bot:Element ;
+	a beo:Door ;
+	rdfs:label "A common door"^^xsd:string ;
+	rdfs:comment "Description of a standard door"^^xsd:string ;
+	bot:hasGuid "157c866c-9c08-4348-a0ed-4d57cd66c9e2"^^xsd:string ;
+	props:tag ""^^xsd:string . 
+
