@@ -1,6 +1,8 @@
 @prefix mfi: <https://example.org/myFirstOntology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.org/myFirstOntology> a owl:Ontology .
 
@@ -24,6 +26,9 @@ mfi:hasElement a owl:ObjectProperty ;
 mfi:hasPart a owl:ObjectProperty ;
     rdfs:domain mfi:Aggregate ;
     rdfs:range mfi:Part .
+
+mfi:name a rdf:Property ;
+    rdfs:range xsd:string .
 
 mfi:Aggregate a owl:Class ;
     rdfs:subClassOf mfi:Element .

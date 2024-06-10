@@ -1,48 +1,86 @@
-@prefix inst: <https://example.org/myFirstInstanceGraph#> .
-@prefix mfi: <https://example.org/myFirstOntology#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix inst: <https://example.org/OurBuilding#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://example.org/myFirstInstanceGraph> a owl:Ontology .
+<https://example.org/OurBuilding> a owl:Ontology .
 
-inst:AHU_45 a mfi:AirHandlingUnit ;
-    mfi:name "The AirHandlingUnit." .
+inst:site_1 a bot:Site ;
+    rdfs:label "Site 1" ;
+    bot:hasBuilding inst:building_1 .
 
-inst:Aggregation_1 a mfi:Aggregate ;
-    mfi:name "Note that aggregations should be modelled differently." .
+inst:building_1 a bot:Building ;
+    rdfs:label "Our building" ;
+    bot:hasStorey inst:storey_0,
+        inst:storey_1,
+        inst:storey_2 .
 
-inst:HumiditySensor_1 a mfi:Sensor ;
-    mfi:name "The sensor that measures air humidity values." .
+inst:space_0 a bot:Space ;
+    rdfs:label "Space 0" .
 
-inst:Part_1 a mfi:Part ;
-    mfi:name "Part 1 of the aggregation." .
+inst:space_1 a bot:Space ;
+    rdfs:label "Space 1" .
 
-inst:Part_2 a mfi:Part ;
-    mfi:name "Part 2 of the aggregation." .
+inst:space_10 a bot:Space ;
+    rdfs:label "Space 10" .
 
-inst:Part_3 a mfi:Part ;
-    mfi:name "Part 3 of the aggregation." .
+inst:space_11 a bot:Space ;
+    rdfs:label "Space 11" .
 
-inst:TemperatureSensor_1 a mfi:Sensor ;
-    mfi:name "The sensor that measures temperature values." .
+inst:space_12 a bot:Space ;
+    rdfs:label "Space 12" .
 
-inst:Wall_1 a mfi:Wall ;
-    mfi:name "Wall number 1." .
+inst:space_13 a bot:Space ;
+    rdfs:label "Space 13" .
 
-inst:Wall_2 a mfi:Wall ;
-    mfi:name "Wall number 2." .
+inst:space_14 a bot:Space ;
+    rdfs:label "Space 14" .
 
-inst:Wall_3 a mfi:Wall ;
-    mfi:name "Wall number 3." .
+inst:space_2 a bot:Space ;
+    rdfs:label "Space 2" .
 
-inst:Wall_4 a mfi:Wall ;
-    mfi:name "Wall number 4." .
+inst:space_3 a bot:Space ;
+    rdfs:label "Space 3" .
 
-inst:space_1 a mfi:Space ;
-    mfi:name "This is our first space." .
+inst:space_4 a bot:Space ;
+    rdfs:label "Space 4" .
 
-inst:space_2 a mfi:Space ;
-    mfi:name "This is our second space." .
+inst:space_5 a bot:Space ;
+    rdfs:label "Space 5" .
 
-inst:space_3 a mfi:Space ;
-    mfi:name "This is our third space." .
+inst:space_6 a bot:Space ;
+    rdfs:label "Space 6" .
+
+inst:space_7 a bot:Space ;
+    rdfs:label "Space 7" .
+
+inst:space_8 a bot:Space ;
+    rdfs:label "Space 8" .
+
+inst:space_9 a bot:Space ;
+    rdfs:label "Space 9" .
+
+inst:storey_0 a bot:Storey ;
+    rdfs:label "Storey 0" ;
+    bot:hasSpace inst:space_0,
+        inst:space_1 .
+
+inst:storey_1 a bot:Storey ;
+    rdfs:label "Storey 1" ;
+    bot:hasSpace inst:space_10,
+        inst:space_11,
+        inst:space_2,
+        inst:space_3,
+        inst:space_4,
+        inst:space_5,
+        inst:space_6,
+        inst:space_7,
+        inst:space_8,
+        inst:space_9 .
+
+inst:storey_2 a bot:Storey ;
+    rdfs:label "Storey 2" ;
+    bot:hasSpace inst:space_12,
+        inst:space_13,
+        inst:space_14 .
 
